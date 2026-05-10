@@ -2,3 +2,4 @@ services:
   temporalio_common.settings:
     class: Drupal\temporalio_common\Service\CommonSettings
     arguments: ['@config.factory']
+  Drupal\temporalio_common\Service\CommonSettings: '@temporalio_common.settings'

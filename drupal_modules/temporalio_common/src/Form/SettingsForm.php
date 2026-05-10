@@ -5,9 +5,18 @@ namespace Drupal\temporalio_common\Form;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
+/**
+ * Settings form.
+ */
 class SettingsForm extends ConfigFormBase {
-  public function getFormId() { return 'temporalio_common_settings'; }
-  protected function getEditableConfigNames() { return ['temporalio_common.settings']; }
+
+  public function getFormId() {
+    return 'temporalio_common_settings';
+  }
+
+  protected function getEditableConfigNames() {
+    return ['temporalio_common.settings'];
+  }
 
   public function buildForm(array $form, FormStateInterface $form_state) {
     $cfg = $this->config('temporalio_common.settings');
@@ -35,4 +44,5 @@ class SettingsForm extends ConfigFormBase {
       ->set('hmac_secret', $form_state->getValue('hmac_secret'))
       ->save();
   }
+
 }

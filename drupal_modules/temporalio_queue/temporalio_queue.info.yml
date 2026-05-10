@@ -1,7 +1,7 @@
 name: Temporal.io Queue Backend
 package: Temporal.io
-core_version_requirement: ^10 || ^11
+core_version_requirement: ^11
 type: module
 description: 'Queue API backend that enqueues to Temporal and executes QueueWorkers via signed callbacks.'
 dependencies:
-  - temporalio_common
+  - drupal:temporalio_common

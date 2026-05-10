@@ -4,3 +4,5 @@ package: Temporal.io
 core_version_requirement: ^10 || ^11
 description: 'Shared settings (HMAC secret, sidecar URL) for Temporal integrations.'
 configure: temporalio_common.settings
+dependencies:
+  - drupal:key
